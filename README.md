@@ -1,7 +1,17 @@
 Can't call this a library, this is simple header that contains a class to "easily" work with .json files, sharing some "fstream" vibes.
 -
+
 I tried to implement map-storage and operator[], but I'm not experienced right now, maybe later
 The header is pretty self-explained, so... good luck to use/expand/break it! :)
+
+Examples (it looks terrifying):
+-
+
+![image](https://github.com/JXRKxff/json/assets/150625469/9afdf9f5-23f7-48ac-8c70-d9889f4a1bfb)
+
+
+![image](https://github.com/JXRKxff/json/assets/150625469/602559ef-7393-425b-8345-8a9550c16a6b)
+
 
 Methods:
 -
@@ -14,15 +24,15 @@ Methods:
 
 - void close()
 
-      calls JSON file to close()
+        calls JSON file to close()
 
 - void find(const string& key, T& var)
 
-        simple method that changes the "var" (because of reference), if key was found in file
+        simple method that changes the "var" (of reference), if key was found in file
 
 - void find_next(const string& key, T& var)
   
-        doesn't reset the stream pos (continues from last stream position) and tries to find() (like in previous method)
+        continues search from last stream position and tries to find()
 
 - T get<T>(const string& key)
 
@@ -30,7 +40,7 @@ Methods:
 
 - T get_next<T>(const string& key)
 
-        same to get() but doesn't reset the stream pos before searching (continues from last stream position)
+        same to get() but continues search from last stream position
 
 - void write(const string& key, const T& var)
 
