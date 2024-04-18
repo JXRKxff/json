@@ -9,9 +9,9 @@ Examples (it looks terrifying):
 
 ![image](https://github.com/JXRKxff/json/assets/150625469/9afdf9f5-23f7-48ac-8c70-d9889f4a1bfb)
 
-
 ![image](https://github.com/JXRKxff/json/assets/150625469/602559ef-7393-425b-8345-8a9550c16a6b)
 
+![image](https://github.com/JXRKxff/json/assets/150625469/07e64d9f-8838-4092-8ce7-9d15213ad04f)
 
 Methods:
 -
