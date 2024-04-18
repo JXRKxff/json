@@ -1,6 +1,7 @@
 #ifndef JSON_JXRK_LIB
 #define JSON_JXRK_LIB
 
+#include <iostream>
 #include <fstream>
 #include <map>
 
@@ -27,7 +28,7 @@ class JSON {
         int tabs = 0;
         bool tab = false;
         fstream file;
-        map<string, any> dict;
+        // map<string, any> dict;
     public:
         JSON() {}
 
@@ -106,14 +107,14 @@ class JSON {
         template <typename T>
         T get(const string& key) {
             T temp;
-            find(key, temp); // some function that overrides temp
+            find(key, temp);
             return temp;
         }
 
         template <typename T>
         T get_next(const string& key) {
             T temp;
-            find_next(key, temp); // some function that overrides temp
+            find_next(key, temp);
             return temp;
         }
 
@@ -184,37 +185,5 @@ class JSON {
             this->close();
         }
 };
-
-/*
-    json.open(path, std::ios::out);
-
-    json.section_open();
-    
-    json.write("name", "Knight");
-    
-    json.write("hp_comp", "");
-    json.section_open();
-    json.write("hp", 30);
-    json.write("max_hp", 30);
-    json.section_close();
-
-    json.write("weapon_comp", "");
-    json.section_open();
-    json.write("weapon_name", "Sword");
-    json.write("weapon_damage", 4);
-    json.write("crit_coeff", 10);
-    json.write("crit_multiplier", 3);
-    json.section_close();
-
-    json.write("current_score", 0);
-    json.write("highest_score", 0);
-    json.write("enemy_id", 0);
-    json.write("enemy_impact", 0);
-    json.write("hash", "3349519565436290102");
-    
-    json.section_close();
-
-    json.close();
-*/
 
 #endif
